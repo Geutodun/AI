@@ -1,3 +1,10 @@
 class(클래스) - 종류
 classification(분류) - 구분 하는 작업  
 binary (이진 분류) - 구분 할게 2개
+
+matplotlib  == plt (줄임말)
+
+샘플 - 데이터들
+특성 - 데이터 그 자체
+
+scatter plot(산점도) - 샘플을 점으로 그래프에 나타낸 것
