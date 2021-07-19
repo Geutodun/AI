@@ -9,5 +9,4 @@ p = ax + b
 p 대신 Odds 넣기 
   -Odds 란 : 성공확률 / 실패확률 - 성공확률 / 1 - 성공확률 = p / 1-
   
-Odds에 로그 씌우기 : loge(Odds) = loge(p/1-p) = ax + b
-
+Odds에 자연로그 씌우기 : loge(Odds) = loge(p/1-p) = ax + b
