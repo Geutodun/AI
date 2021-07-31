@@ -1,0 +1,38 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+####선형 회귀 시작
+
+height = np.array([181, 170, 168, 173, 177, 165])
+height = height.reshape(-1,1)
+
+math = np.array([90, 30, 55, 15, 75, 88])
+
+from sklearn.linear_model import LinearRegression
+
+line_fitter = LinearRegression()
+
+line_fitter.fit(height, math)
+#fit() 함수 : line_fitter.coef_ : 기울기 저장
+#             line_fitter.intercept_ : 절편을 저장
+
+score_predict = line_fitter.predict(height)
+
+plt.plot(height, math, 'x') #x는 키에 따른 성적 데이터
+plt.plot(height, score_predict)
+plt.show()
+
+line_fitter.coef_  #기울기
+
+line_fitter.intercept_  #절편
+
+#성능 평가(mse)
+from sklearn.metrics import mean_squared_error
+
+print("Mean_Sqared_Error :", mean_squared_error(score_predict, math))
+
+#RMSE : MSE에 루트를 붙인 값
+print("RMSE :", mean_squared_error(score_predict, math)**0.5)
+
+print('score: ', line_fitter.score(height, math))
