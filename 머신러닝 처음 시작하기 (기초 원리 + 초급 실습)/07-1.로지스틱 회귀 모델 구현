@@ -1,0 +1,55 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns    #시각화 도움 라이브러리
+import numpy as np
+
+from sklearn.datasets import load_iris
+
+iris = load_iris()      #꽃을 분류하는 데이터
+
+print(iris.DESCR)
+
+print(iris.target_names)
+
+print(iris.feature_names)
+
+print(iris.data[0:5])
+
+print(iris.target)
+#target data 0,1,2 = 각각의 저희가 앞에서 봤던 꽃 이름들과 매칭된다
+
+X = iris.data
+y = iris.target
+#x가 isis data 받고 y가 타겟 데이터 즉, 꽃종류들
+
+df = pd.DataFrame(X, columns = ['sepal_width(cm)', 'sepal_length(cm)', 'petal_width(cm)', 'petal_length(cm)'])
+
+df.head()
+
+df = pd.DataFrame(iris.data, columns = iris.feature_names)
+df['species'] = np.array([iris.target_names[i] for i in iris.target])
+
+sns.pairplot(df, hue='species')   #species를 기준으로 분류
+
+#시본은 3차원 이상의 데이터에서 주로 사용
+#hue = 'species' -> 카테고리형 데이터가 섞여 있을 떄 이걸로 카테고리 값에 따라 색상을 다르게 함
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3)
+#70% = training data, 30% = test data
+
+from sklearn.linear_model import LogisticRegression
+
+log_r = LogisticRegression()
+
+log_r.fit(X, y)
+
+W, b = log_r.coef_, log_r.intercept_
+
+W, b
+
+print(log_r.score(X_train, y_train))
+#X, y 둘다 트레인 데이터로 훈련시켰을 때의 값
+
+print(log_r.score(X_test, y_test))
