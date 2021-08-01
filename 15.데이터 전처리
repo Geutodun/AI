@@ -1,7 +1,0 @@
-결측치 처리 : 평균 넣기, 최빈값 넣기, 삭제
-  -df.isnull().sum() : 결측치 총 데이터 겟수 확인
-  -df.fillna(0) : 결측치를 0으로 만들기
-  
-범주형 변수 처리 : 원-핫 인코딩 (범주형 변수를 0또는 1값을 가지는 값으로 변경), 데이터 바인딩 (연속한 데이터를 구간으로 나뉘어서 범주화)
-
-Feature scaling (데이터의 Feature를 조절) : Min-Max NOrmalization, Standardization
