@@ -1,7 +1,0 @@
-Precision(정밀도) = a / a+c
-
-재현율 = a / a+b  : True 클래스 모델이 잘 예측한 비율
-
-Accuracy = a+d / a+b+c+d : 전체 클래스 중에서 True, False를 잘 예측한 비율
-
-F1 Score = 2 X (정밀도X재현율) / (정밀도+재현율)  : 정밀도와 재현율의 조화 평균  
