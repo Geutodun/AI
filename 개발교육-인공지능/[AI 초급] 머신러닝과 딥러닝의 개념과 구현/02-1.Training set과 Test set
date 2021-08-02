@@ -1,0 +1,8 @@
+#machine-learning 
+  -Overfitting : 과도하게 복잡 (과도한 최적화)
+  -Underfitting : 오차가 큰 데이터가 존재 (최적화가 안됨)
+  -Balanced : 딱 좋은 상태 (최적화)
+  
+#Training set / Test set
+  -Overfitting을 막기 위해 사용
+  
