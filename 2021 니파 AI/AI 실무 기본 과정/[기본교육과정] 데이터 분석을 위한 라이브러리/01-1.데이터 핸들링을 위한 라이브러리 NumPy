@@ -1,0 +1,31 @@
+Numpy : Numerical Python  (수치적 파이썬)
+  -파이썬에서 대규모 다차원 배열을 다룰수 있게 도와주는 라이브러리
+  
+#장점 
+  -반복문 없이 배열 처리 가능
+  -파이썬 리스트에 비해 빠른 연산, 효율적인 메모리 사용
+  
+  
+  #(배열)데이터 타입
+    -같은 데이터 타입만 저장 가능 (리스트는 달라도 가능)
+    -int : 정수 , float : 실수 , str : 문자열 , bool :  T/F
+    
+  
+  #넘파이 사용
+    -ndarray = n차원의 배열
+      *ndim : 몇차원인지
+      *shape : 모양 (원소 갯수)
+    
+    
+    
+    
+  import numpy as np
+  변수 = np.array(range(5))
+  print(변수)  #[0 1 2 3 4]  => 리스트는 공백이 아니라 ,로 채워짐
+  print(type(변수))  #<class 'numpy.ndarray
+  
+  
+  
+
+    
+  
