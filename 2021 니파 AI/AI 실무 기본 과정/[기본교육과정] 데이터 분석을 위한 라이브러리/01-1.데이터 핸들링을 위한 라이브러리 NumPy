@@ -16,14 +16,17 @@ Numpy : Numerical Python  (수치적 파이썬)
       *ndim : 몇차원인지
       *shape : 모양 (원소 갯수)
     
-    
-    
-    
   import numpy as np
   변수 = np.array(range(5))
   print(변수)  #[0 1 2 3 4]  => 리스트는 공백이 아니라 ,로 채워짐
   print(type(변수))  #<class 'numpy.ndarray
   
+  
+  
+  #인덱싱 슬라이싱
+    *indexing : 데이터를 찾아내는 것 (인덱스로 값을 찾아냄)
+    
+    *slicing : 데이터를 잘라내는 것 (인덱스의 값으로 배열의 일부분을 가져옴)
   
   
 
