@@ -1,0 +1,32 @@
+#Pandas 
+  -파이썬 라이브러리
+  -구조화된 데이터를 효과적으로 처리하고 저장
+  -Array 계산에 특화된 NumPy를 기반으로 설계
+  
+#Series
+  -Data와 Index를 가지고 있음  (데이터 값을 배열(NumPy))
+  -NumPy의 array가 보강된 형태
+  -dtype 인자로 데이터 타입을 지정 가능
+  -인덱스를 지정할 수 있고 인덱스로 접근 가능
+  -Dictionary를 활용하여 Series 생성가능
+  -연산자 활용 가능
+  
+  
+import pandas as pd
+data = pd.Series([1, 2, 3, 4], dtype = "float", index['a', 'b', 'c', 'd'])
+population_dict = {'china' : 141500, 'korea' : 5180, 'japan' : 12718}
+population = pd.Series(population_dict)
+
+
+#DataFrame
+  -여러 개의 Series가 모여서 행과 열을 이룬 데이터
+  -Dictionary를 활용하여 DataFrame생성 가능
+  -DataFrame의 index와 column에 이름 지정 가능
+  -저장 및 불러오기 가능
+ 
+ 
+ 
+#데이터 선택 및 변경하기
+  *.loc : 명시적인 인덱스를 참조하는 인덱싱/슬라이싱
+  *.iloc : 파이썬 스타일의 정수 인덱스 인덱싱/슬라이싱\
+  -컬럼명 활용하여 DataFrame에서 데이터 선택 가능
