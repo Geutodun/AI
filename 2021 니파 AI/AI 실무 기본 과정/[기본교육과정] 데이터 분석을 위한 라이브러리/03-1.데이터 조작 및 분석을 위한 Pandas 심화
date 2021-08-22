@@ -1,0 +1,29 @@
+#Index 값 기준으로 정렬하기
+  -axis = 0 : 행 인덱스 기준 정렬(Default 오름차순)
+  -axis = 1 : 열 인덱스 기준 내림차순 정렬
+  
+df = df.sort_index(axis = 0)
+df.sort_index(axis = 1, ascending = False)
+
+
+#Columm 값 기준으로 정렬하기
+  -col1 컬럼 기준 정렬(Default 오름차순)
+  -col1 컬럼 기준 내림차순정렬
+  -col2 컬럼 기준 오름차순 정렬 후 col1 컬럼 기준 내림차순 정렬
+  
+df.sort_values('col1', ascending = True)
+df.sort_values('col1', ascending = False)
+df.sort_values(['col2', 'col1'], ascending = [True, False])
+
+
+#데이터프레임 분석용 함수
+  -count : 메서드 활용하여 데이터 개수 확인 가능 (Default : nan값 제외)
+  -max, min : 메서드 활용하여 최대, 최소값 확인 가능 (Default : 열 기준, nan값 제외)
+  -sum, mean : 메서드 활용하여 합계 및 평균 계산 (Default : 열 기준, nan값 제외)
+    *axis, skipna 인자 활용하여 함계 및 평균 계산 (행 기준, NaN값 포함)
+    *NaN 값이 존재하는 columm의 평균 구하여 NaN값 대체 (fillna)
+    
+    
+    
+#그룹으로 묶기
+
