@@ -46,4 +46,18 @@ tuple[0]
 
 
 2-5 : 딕셔너리
--
+-dictionary(딕셔너리)는 "키:값"을 쌍으로 가짐
+dict = {'name':'lee', 'age':20}
+dict['name']
+
+-딕셔너리에 원소를 추가할려면 원소의 키를 []안에 입력 후 짝이 되는 값을 할당 연산자(=) 오른쪽에 입력
+dict['sex'] = ['male']
+
+-딕셔너리의 키 추출은 .key 사용
+dict.keys()
+
+-딕셔너리의 값은 .values() 사용
+dict.values()
+
+-items() 메소드를 사용하면 (키,값) 형태의 튜플로 추출
+dict.items()
